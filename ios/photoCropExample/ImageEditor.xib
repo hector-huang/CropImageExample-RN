@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageEditor" customModule="Verify" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonContainerWidthCollapsed" destination="TX1-nZ-Xyj" id="Cod-dT-wzm"/>
+                <outlet property="buttonContainerWidthExpanded" destination="Dv2-cY-27V" id="vwV-yP-IrQ"/>
+                <outlet property="imageContainer" destination="Bqt-ap-reB" id="NsG-gb-CkS"/>
+                <outlet property="retakeButton" destination="qk4-30-9e1" id="hld-Ar-afa"/>
+                <outlet property="useButton" destination="lMg-bI-EP3" id="h9r-EQ-byQ"/>
+                <outlet property="view" destination="mwj-F3-Gxc" id="Oe2-Rk-B2O"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mwj-F3-Gxc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqt-ap-reB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB9-Gr-ckE">
+                    <rect key="frame" x="175" y="756" width="64" height="106"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMg-bI-EP3">
+                            <rect key="frame" x="0.0" y="19" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="dYu-93-OQL"/>
+                                <constraint firstAttribute="width" constant="64" id="zPB-CP-cY3"/>
+                            </constraints>
+                            <state key="normal" image="confirm-photo"/>
+                            <connections>
+                                <action selector="usePhoto" destination="-1" eventType="touchUpInside" id="Khs-3a-UJ4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk4-30-9e1">
+                            <rect key="frame" x="0.0" y="19" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="Chc-2x-wgi"/>
+                                <constraint firstAttribute="width" constant="64" id="ceE-9X-UYz"/>
+                            </constraints>
+                            <state key="normal" image="retake"/>
+                            <connections>
+                                <action selector="cancel" destination="-1" eventType="touchUpInside" id="aPF-55-PF9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lMg-bI-EP3" secondAttribute="trailing" id="5b7-Az-XiV"/>
+                        <constraint firstItem="lMg-bI-EP3" firstAttribute="centerY" secondItem="fB9-Gr-ckE" secondAttribute="centerY" constant="-2" id="BCD-BS-vTV"/>
+                        <constraint firstItem="qk4-30-9e1" firstAttribute="centerY" secondItem="fB9-Gr-ckE" secondAttribute="centerY" constant="-2" id="BlY-YP-VcM"/>
+                        <constraint firstAttribute="width" constant="64" id="TX1-nZ-Xyj"/>
+                        <constraint firstItem="qk4-30-9e1" firstAttribute="leading" secondItem="fB9-Gr-ckE" secondAttribute="leading" id="cQ6-nv-PsV"/>
+                        <constraint firstAttribute="height" constant="106" id="nQC-fN-r7p"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Bqt-ap-reB" firstAttribute="leading" secondItem="ZyB-OV-EPc" secondAttribute="leading" id="2DH-rb-gZ2"/>
+                <constraint firstItem="fB9-Gr-ckE" firstAttribute="width" secondItem="mwj-F3-Gxc" secondAttribute="width" constant="-140" id="Dv2-cY-27V"/>
+                <constraint firstItem="Bqt-ap-reB" firstAttribute="top" secondItem="mwj-F3-Gxc" secondAttribute="top" id="MIm-fZ-ktd"/>
+                <constraint firstItem="ZyB-OV-EPc" firstAttribute="bottom" secondItem="fB9-Gr-ckE" secondAttribute="bottom" id="TWL-JQ-zoR"/>
+                <constraint firstItem="fB9-Gr-ckE" firstAttribute="top" secondItem="Bqt-ap-reB" secondAttribute="bottom" id="end-Re-vC1"/>
+                <constraint firstItem="ZyB-OV-EPc" firstAttribute="trailing" secondItem="Bqt-ap-reB" secondAttribute="trailing" id="kVo-QV-eMt"/>
+                <constraint firstItem="fB9-Gr-ckE" firstAttribute="centerX" secondItem="ZyB-OV-EPc" secondAttribute="centerX" id="oBd-Ed-5kB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZyB-OV-EPc"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Dv2-cY-27V"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="132" y="154.27286356821591"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="confirm-photo" width="64" height="64"/>
+        <image name="retake" width="64" height="64"/>
+    </resources>
+</document>

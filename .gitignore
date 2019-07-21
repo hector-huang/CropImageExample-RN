@@ -1,0 +1,5 @@
+node_modules
+ios/Pods
+ios/Carthage/Build
+ios/build
+ios/Carthage
